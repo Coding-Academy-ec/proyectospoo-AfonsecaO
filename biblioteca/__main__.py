@@ -20,9 +20,21 @@ def main():
     transaccion2 = Transaccion(usuario2, libro2, fecha_prestamo)
     transaccion2.prestar()
 
+    #ingresar manualmente los datos de las transacciones
+    codigo_libro = input("Ingresa el Codigo de Libro: ")
+    nombre_libro = input("Ingresa el Nombre del Libro: ")
+    autor_libro = input("Ingresa el Autor del Libro: ")
+    usuario_presta = input("Ingresa el Codigo de Usuario: ")
+    nombre_usuario = input("Ingresa el Nombre del Usuario: ")
+
+    libro3 = Libro(codigo_libro, nombre_libro, autor_libro)
+    usuario3 = Usuario(usuario_presta, nombre_usuario)
+    transaccion3 = Transaccion(usuario3, libro3, fecha_prestamo)
+    transaccion3.prestar()
+
     # Mostrar detalles de las transacciones
     print("Transacciones realizadas:")
-    for transaccion in [transaccion1, transaccion2]:
+    for transaccion in [transaccion1, transaccion2, transaccion3]:
         print(transaccion)
 
 if __name__ == "__main__":
